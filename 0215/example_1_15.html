@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>1¹øºÎÅÍ 15¹ø±îÁö ÅëÇÕ</title>
+<title>1ë²ˆë¶€í„° 15ë²ˆê¹Œì§€ í†µí•©</title>
 
 <!-- <script src="script/lib.js"> -->
 <script>
@@ -13,7 +13,7 @@ function out(obj) {
 	obj.src="img/apple.png";
 }
 
-function digit8(v) { // ¼ıÀÚ v¸¦ 8ºñÆ® 2Áø¼ö·Î º¯È¯
+function digit8(v) { // ìˆ«ì vë¥¼ 8ë¹„íŠ¸ 2ì§„ìˆ˜ë¡œ ë³€í™˜
 	var str="";
 	for(i=0; i<8; i++, v<<=1) {
 		if((v & 0x80)) str += "1";
@@ -24,8 +24,8 @@ function digit8(v) { // ¼ıÀÚ v¸¦ 8ºñÆ® 2Áø¼ö·Î º¯È¯
 </script>
 </head>
 <body>
-<h3> 1¹ø ¹®Á¦ </h3>
-<img src="img/apple.png" alt="ÀÌ¹ÌÁö" width="100" height="100"
+<h3> 1ë²ˆ ë¬¸ì œ </h3>
+<img src="img/apple.png" alt="ì´ë¯¸ì§€" width="100" height="100"
 		onmouseover="this.src='img/banana.jpg'"
 		onmouseout="this.src='img/apple.png'">
 
@@ -33,97 +33,97 @@ function digit8(v) { // ¼ıÀÚ v¸¦ 8ºñÆ® 2Áø¼ö·Î º¯È¯
 
 
 <hr>
-<h3> 2¹ø ¹®Á¦ </h3>
-<h4>script ÅÂ±×¿¡ ÀÚ¹Ù½ºÅ©¸³Æ® ÀÛ¼º</h4>
-<h5>¸¶¿ì½º ¿Ã·Á º¸¼¼¿ä</h5>
-<img src="img/apple.png" alt="ÀÌ¹ÌÁö2" width="100" height="100"
+<h3> 2ë²ˆ ë¬¸ì œ </h3>
+<h4>script íƒœê·¸ì— ìë°”ìŠ¤í¬ë¦½íŠ¸ ì‘ì„±</h4>
+<h5>ë§ˆìš°ìŠ¤ ì˜¬ë ¤ ë³´ì„¸ìš”</h5>
+<img src="img/apple.png" alt="ì´ë¯¸ì§€2" width="100" height="100"
 		onmouseover="over(this)"
 		onmouseout="out(this)">
 <br/>
 <br/>
-<img src="img/apple.png" alt="ÀÌ¹ÌÁö2_1" width="100" height="100"
+<img src="img/apple.png" alt="ì´ë¯¸ì§€2_1" width="100" height="100"
 		onmouseover="over1(this)"
 		onmouseout="out1(this)">
 <br/>
-ÇöÀç ÀÌºÎºĞÀº htmlÀ§¿¡ ÀÖ´Â ÇÔ¼ö°¡ ¾Æ´Ï¶ó 3¹ø ¹®Á¦ ÂÊ scriptÅÂ±×ÀÇ ¿µÇâÀ» ¹Ş¾Æ¼­ lib.js³»¿¡ÀÖ´Â ÇÔ¼ö over¿Í outÀ» »ç¿ëÇÕ´Ï´Ù. 
+í˜„ì¬ ì´ë¶€ë¶„ì€ htmlìœ„ì— ìˆëŠ” í•¨ìˆ˜ê°€ ì•„ë‹ˆë¼ 3ë²ˆ ë¬¸ì œ ìª½ scriptíƒœê·¸ì˜ ì˜í–¥ì„ ë°›ì•„ì„œ lib.jsë‚´ì—ìˆëŠ” í•¨ìˆ˜ overì™€ outì„ ì‚¬ìš©í•©ë‹ˆë‹¤. 
 <br/>
 
 
 <hr>
 <script src="script/lib.js"></script>
-<h3> 3¹ø ¹®Á¦ </h3>
-<h4> ¿ÜºÎ ÆÄÀÏ¿¡ ÀÚ¹Ù½ºÅ©¸³Æ® ÀÛ¼º </h4>
-<img src="img/apple.png" alt="ÀÌ¹ÌÁö3" width="100" height="100"
+<h3> 3ë²ˆ ë¬¸ì œ </h3>
+<h4> ì™¸ë¶€ íŒŒì¼ì— ìë°”ìŠ¤í¬ë¦½íŠ¸ ì‘ì„± </h4>
+<img src="img/apple.png" alt="ì´ë¯¸ì§€3" width="100" height="100"
 		onmouseover="overTest(this)"
 		onmouseout="outTest(this)">		
 <br/>
 <br/>
 
 <hr>
-<h3> 4¹ø ¹®Á¦ </h3>
-<h4> URL¿¡ ÀÚ¹Ù½ºÅ©¸³Æ® ÀÛ¼º </h4>
-<h5> ¸µÅ©ÀÇ href¿¡ ÀÚ¹Ù½ºÅ©¸³Æ® ÀÛ¼º </h5>
+<h3> 4ë²ˆ ë¬¸ì œ </h3>
+<h4> URLì— ìë°”ìŠ¤í¬ë¦½íŠ¸ ì‘ì„± </h4>
+<h5> ë§í¬ì˜ hrefì— ìë°”ìŠ¤í¬ë¦½íŠ¸ ì‘ì„± </h5>
 
-<a href="javascript:alert('Å¬¸¯ÇÏ¼Ì¾î¿ä?')">
-Å¬¸¯ÇØº¸¼¼¿ä</a>
+<a href="javascript:alert('í´ë¦­í•˜ì…¨ì–´ìš”?')">
+í´ë¦­í•´ë³´ì„¸ìš”</a>
 
 <br/>
 
 
 <hr>
-<h3> 5¹ø ¹®Á¦ </h3>
-<h4> document.write() È°¿ë </h4>
+<h3> 5ë²ˆ ë¬¸ì œ </h3>
+<h4> document.write() í™œìš© </h4>
 <script>
 	document.write("<h3>Welcome!</h3>");
-	document.write("2 + 5 ´Â <br>");
-	document.write("<mark>7 ÀÔ´Ï´Ù.</mark>");
+	document.write("2 + 5 ëŠ” <br>");
+	document.write("<mark>7 ì…ë‹ˆë‹¤.</mark>");
 </script>
 <br/>
 
 
 <hr>
-<h3> 6¹ø ¹®Á¦ </h3>
-<h4> Áö¿ªº¯¼ö¿Í Àü¿ªº¯¼ö </h4>
+<h3> 6ë²ˆ ë¬¸ì œ </h3>
+<h4> ì§€ì—­ë³€ìˆ˜ì™€ ì „ì—­ë³€ìˆ˜ </h4>
 <script>
-var x=100; // Àü¿ªº¯¼ö
+var x=100; // ì „ì—­ë³€ìˆ˜
 
-function f() { // ÇÔ¼ö f() ¼±¾ğ
-	var x=1; // Áö¿ªº¯¼ö
-	document.write("Áö¿ªº¯¼ö x=" + x);
+function f() { // í•¨ìˆ˜ f() ì„ ì–¸
+	var x=1; // ì§€ì—­ë³€ìˆ˜
+	document.write("ì§€ì—­ë³€ìˆ˜ x=" + x);
 	document.write("<br>");
-	document.write("Àü¿ªº¯¼ö x=" + this.x);
+	document.write("ì „ì—­ë³€ìˆ˜ x=" + this.x);
 }
 
-f(); // ÇÔ¼ö f() È£Ãâ
+f(); // í•¨ìˆ˜ f() í˜¸ì¶œ
 </script>
 <br/>
 
 
 <hr>
-<h3> 7¹ø ¹®Á¦ </h3>
-<h4> »ó¼ö </h4>
+<h3> 7ë²ˆ ë¬¸ì œ </h3>
+<h4> ìƒìˆ˜ </h4>
 <script>
-	var oct = 015; // 015´Â 8Áø¼ö. 10Áø¼ö·Î 13
-	var hex = 0x15; // 0x14´Â 16Áø¼ö. 10Áø¼ö·Î 21
-	var condition = true; // True·Î ÇÏ¸é ¾ÈµÊ
+	var oct = 015; // 015ëŠ” 8ì§„ìˆ˜. 10ì§„ìˆ˜ë¡œ 13
+	var hex = 0x15; // 0x14ëŠ” 16ì§„ìˆ˜. 10ì§„ìˆ˜ë¡œ 21
+	var condition = true; // Trueë¡œ í•˜ë©´ ì•ˆë¨
 
-	document.write("8Áø¼ö 015´Â ½ÊÁø¼ö·Î " + oct + "<br>");
-	document.write("16Áø¼ö 0x15´Â ½ÊÁø¼ö·Î " + hex + "<br>");
-	document.write("conditionÀº " + condition + "<br>");
-	document.write('¹®ÀÚ¿­ : ´ÜÀÏÀÎ¿ëºÎÈ£·Îµµ Ç¥Çö' + "<br>");
-	document.write("±×³à´Â \"´©±¸¼¼¿ä\"¶ó°í Çß½À´Ï´Ù.");
+	document.write("8ì§„ìˆ˜ 015ëŠ” ì‹­ì§„ìˆ˜ë¡œ " + oct + "<br>");
+	document.write("16ì§„ìˆ˜ 0x15ëŠ” ì‹­ì§„ìˆ˜ë¡œ " + hex + "<br>");
+	document.write("conditionì€ " + condition + "<br>");
+	document.write('ë¬¸ìì—´ : ë‹¨ì¼ì¸ìš©ë¶€í˜¸ë¡œë„ í‘œí˜„' + "<br>");
+	document.write("ê·¸ë…€ëŠ” \"ëˆ„êµ¬ì„¸ìš”\"ë¼ê³  í–ˆìŠµë‹ˆë‹¤.");
 </script>
 <br/>
 
 
 <hr>
-<h3> 8¹ø ¹®Á¦ </h3>
-<h4> »ê¼ú ¿¬»ê </h4>
+<h3> 8ë²ˆ ë¬¸ì œ </h3>
+<h4> ì‚°ìˆ  ì—°ì‚° </h4>
 <script>
 	var x=32;
-	var total = 100 + x*2/4 - 3; // totalÀº 113
-	var div = x / 10; // div´Â 3.2
-	var mod = x % 2; // x¸¦ 2·Î ³ª´« ³ª¸ÓÁö, 0
+	var total = 100 + x*2/4 - 3; // totalì€ 113
+	var div = x / 10; // divëŠ” 3.2
+	var mod = x % 2; // xë¥¼ 2ë¡œ ë‚˜ëˆˆ ë‚˜ë¨¸ì§€, 0
 
 	document.write("x : " + x + "<br><br>");
 	document.write("100 + x*2/4 - 3 = " + total + "<br>");
@@ -133,8 +133,8 @@ f(); // ÇÔ¼ö f() È£Ãâ
 <br/>
 
 <hr>
-<h3> 9¹ø ¹®Á¦ </h3>
-<h4> ´ëÀÔ ¿¬»ê </h4>
+<h3> 9ë²ˆ ë¬¸ì œ </h3>
+<h4> ëŒ€ì… ì—°ì‚° </h4>
 <script>
 	var x=3, y=3, z=3;
 	document.write("x=" + x + ", y=" + y);
@@ -144,15 +144,15 @@ f(); // ÇÔ¼ö f() È£Ãâ
 	y *= 3; // y=y*3 -> y=9
 	z %= 2; // z=z%2 -> z=1
 
-	document.write("x += 3; ½ÇÇà ÈÄ, x=" + x + "<br>");
-	document.write("y *= 3; ½ÇÇà ÈÄ, y=" + y + "<br>");
-	document.write("z %= 2; ½ÇÇà ÈÄ, z=" + z);
+	document.write("x += 3; ì‹¤í–‰ í›„, x=" + x + "<br>");
+	document.write("y *= 3; ì‹¤í–‰ í›„, y=" + y + "<br>");
+	document.write("z %= 2; ì‹¤í–‰ í›„, z=" + z);
 </script>
 <br/>
 
 <hr>
-<h3> 10¹ø ¹®Á¦ </h3>
-<h4> ºñ±³ ¿¬»ê </h4>
+<h3> 10ë²ˆ ë¬¸ì œ </h3>
+<h4> ë¹„êµ ì—°ì‚° </h4>
 <script>
 	var x=13, y=7;
 	document.write("x=" + x + ", y=" + y + "<br><br>");
@@ -166,8 +166,8 @@ f(); // ÇÔ¼ö f() È£Ãâ
 <br/>
 
 <hr>
-<h3> 11¹ø ¹®Á¦ </h3>
-<h4> ³í¸® ¿¬»ê </h4>
+<h3> 11ë²ˆ ë¬¸ì œ </h3>
+<h4> ë…¼ë¦¬ ì—°ì‚° </h4>
 <script>
 	var x=true; y=false;
 	document.write("x=" + x + ", y=" + y + "<br><br>");
@@ -181,25 +181,25 @@ f(); // ÇÔ¼ö f() È£Ãâ
 <br/>
 
 <hr>
-<h3> 12¹ø ¹®Á¦ </h3>
-<h4> Á¶°Ç ¿¬»ê </h4>
+<h3> 12ë²ˆ ë¬¸ì œ </h3>
+<h4> ì¡°ê±´ ì—°ì‚° </h4>
 <script>
 	var a=3, b=5;
 	document.write("a=" + a + ", b=" + b + "<br><br>");
-	document.write("µÎ¼öÀÇ Â÷ÀÌ : " + ((a>b)?(a-b):(b-a)));
+	document.write("ë‘ìˆ˜ì˜ ì°¨ì´ : " + ((a>b)?(a-b):(b-a)));
 </script>
 <br/>
 
 <hr>
-<h3> 13¹ø ¹®Á¦ </h3>
-<h4> ºñÆ® ¿¬»ê </h4>
-<h5> ºñÆ® ³í¸® ¿¬»ê°ú ½ÃÇÁÆ® ¿¬»ê </h5>
+<h3> 13ë²ˆ ë¬¸ì œ </h3>
+<h4> ë¹„íŠ¸ ì—°ì‚° </h4>
+<h5> ë¹„íŠ¸ ë…¼ë¦¬ ì—°ì‚°ê³¼ ì‹œí”„íŠ¸ ì—°ì‚° </h5>
 <script>
 	var x=10, y=3;
 	document.write("<pre>");
-	document.write("x=" + x + ", y=" + y + "<br>"); // x, y °ª Ãâ·Â
-	document.write("x : 		" + digit8(x) + "<br>"); // x °ª Ãâ·Â
-	document.write("y : 		" + digit8(y) + "<br>"); // y °ª Ãâ·Â
+	document.write("x=" + x + ", y=" + y + "<br>"); // x, y ê°’ ì¶œë ¥
+	document.write("x : 		" + digit8(x) + "<br>"); // x ê°’ ì¶œë ¥
+	document.write("y : 		" + digit8(y) + "<br>"); // y ê°’ ì¶œë ¥
 	document.write("<br>");
 	document.write("x & y  : 	" + digit8(x&y) + "<br>");
 	document.write("x | y  : 	" + digit8(x|y) + "<br>");
@@ -214,8 +214,8 @@ f(); // ÇÔ¼ö f() È£Ãâ
 <br/>
 
 <hr>
-<h3> 14¹ø ¹®Á¦ </h3>
-<h4> ¹®ÀÚ¿­ ¿¬»ê </h4>
+<h3> 14ë²ˆ ë¬¸ì œ </h3>
+<h4> ë¬¸ìì—´ ì—°ì‚° </h4>
 <script>
 	document.write("abc" + 23 + "<br>");
 	document.write(23 + "abc" + "<br>");
@@ -232,24 +232,24 @@ f(); // ÇÔ¼ö f() È£Ãâ
 <br/>
 
 <hr>
-<h3> 15¹ø ¹®Á¦ </h3>
+<h3> 15ë²ˆ ë¬¸ì œ </h3>
 <h4> if-else </h4>
-<h5> if-else¸¦ ÀÌ¿ëÇÑ ÇĞÁ¡ ¸Å±â±â </h5>
+<h5> if-elseë¥¼ ì´ìš©í•œ í•™ì  ë§¤ê¸°ê¸° </h5>
 <script>
 	var grade;
-	var score = prompt("±è¹Î±Ô ´Ô Á¡¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä", 100);
-	score = parseInt(score); // ¹®ÀÚ¿­À» ¼ıÀÚ·Î ¹Ù²Ş
-	if(score >= 90) // score°¡ 90 ÀÌ»ó
+	var score = prompt("ê¹€ë¯¼ê·œ ë‹˜ ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”", 100);
+	score = parseInt(score); // ë¬¸ìì—´ì„ ìˆ«ìë¡œ ë°”ê¿ˆ
+	if(score >= 90) // scoreê°€ 90 ì´ìƒ
 		grade = "A";
-	else if(score >= 80) // 80 ÀÌ»ó 90 ¹Ì¸¸
+	else if(score >= 80) // 80 ì´ìƒ 90 ë¯¸ë§Œ
 		grade = "B";
-	else if(score >= 70) // 70 ÀÌ»ó 80 ¹Ì¸¸
+	else if(score >= 70) // 70 ì´ìƒ 80 ë¯¸ë§Œ
 		grade = "C";
-	else if(score >= 60) // 60 ÀÌ»ó 70 ¹Ì¸¸
+	else if(score >= 60) // 60 ì´ìƒ 70 ë¯¸ë§Œ
 		grade = "D";
-	else // 60 ¹Ì¸¸
+	else // 60 ë¯¸ë§Œ
 		grade = "F";
-	document.write(score + "Àº " + grade + "ÀÔ´Ï´Ù.<br>")
+	document.write(score + "ì€ " + grade + "ì…ë‹ˆë‹¤.<br>")
 </script>
 <br/>
 
