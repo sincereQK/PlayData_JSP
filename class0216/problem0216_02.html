@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>비밀번호 확인</title>
+</head>
+<body>
+<script>
+var flag = 1;
+var rightPW = "0216";
+do {
+	pw = prompt("비밀번호 입력");
+	if(pw==rightPW) {
+		document.write("PASS");
+		flag = 0;
+	} else {
+		alert('올바르지 못한 입력');
+		flag = 1;
+	}
+} while(flag==1);
+</script>
+</body>
+</html>
