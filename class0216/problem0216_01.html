@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="UTF-8">
+<title>2차방정식 근 구하기</title>
+</head>
+<body>
+<h3>2차 방정식 근 구하기</h3>
+<hr>
+<script>
+function quadraticFunction() {
+	var a = prompt("A입력", 0);
+	a = parseInt(a);
+	var b = prompt("B입력", 0);
+	b = parseInt(b);
+	var c = prompt("C입력", 0);
+	c = parseInt(c);
+
+	discriminant = Math.pow(b, 2) - (4 * a * c);
+    root1 = ((-1 * b) + Math.sqrt(discriminant)) / (2*a);
+    root2 = ((-1 * b) - Math.sqrt(discriminant)) / (2*a);
+    
+	if(a==0){
+		alert('2차 방정식이 아님!');
+	} else if(discriminant<0) {
+		alert('근이 없음!');
+	} else if(discriminant==0) {
+		alert('중근'+root1);
+	} else {
+		alert('서로 다른 두 근 : '+root1+", "+root2);
+	}
+}
+</script>
+<button onclick="quadraticFunction()">2차 방정식 근 구하기</button>
+</body>
+</html>
+
