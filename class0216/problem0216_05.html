@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>0216 5번 문제</title>
+</head>
+<body>
+<h3>배열 역순 출력</h3>
+<hr>
+<script type="text/javascript">
+var arr = new Array();
+
+var min;
+var temp;
+
+for(i=0;i<7;i++) {
+	tmp = prompt("숫자 입력", 0);
+	tmp = parseInt(tmp);
+	arr[i] = tmp;
+}
+
+for(j=arr.length-1;j>=0;j--) {
+	document.write("arr["+j+"] = "+arr[j]+"<br>");
+}
+</script>
+<hr>
+<h3>배열 정렬</h3>
+<hr>
+<script type="text/javascript">
+
+for(i = 0; i < arr.length; i++) {
+    for(j = 0 ; j < arr.length - i - 1 ; j++) {
+        if(arr[j] > arr[j+1]) {
+            temp = arr[j+1];
+            arr[j+1] = arr[j];
+            arr[j] = temp;
+        }
+    }
+}
+
+for(i=0;i<arr.length;i++){
+	document.write("arr["+i+"] = "+arr[i]+"<br>");
+}
+
+</script>
+</body>
+</html>
