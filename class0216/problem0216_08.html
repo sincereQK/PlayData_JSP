@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>0216 8번문제</title>
+
+<script type="text/javascript">
+function nameOfTheBook() {
+	return this.name;
+}
+
+function readBook(num) {
+	this.read = num;
+	return this.read;
+}
+
+function pageLeft() {
+	left = this.page - this.read;
+	return left;
+}
+
+var book = new Object();
+book.name = "수학의 정석";
+book.author = "홍성대";
+book.publisher = "성지출판";
+book.read = 0;
+book.page = 300;
+book.nameOfTheBook = nameOfTheBook;
+book.readBook = readBook;
+book.pageLeft = pageLeft; 
+</script>
+
+<script type="text/javascript">
+var book2 = {
+	name : "수학의 정석",
+	author : "홍성대",
+	publisher : "성지출판",
+	read : 0,
+	page : 300,
+	nameOfTheBook : function() { return this.name;},
+	readBook : function(num) {
+		this.read = num;
+		return this.read;
+	},
+	pageLeft : function() {
+		left = this.page - this.read;
+		return left;
+	}
+};
+</script>
+
+<script type="text/javascript">
+function Book(name, author,publisher,page) {
+	this.name = name;
+	this.author = author;
+	this.publisher = publisher;
+	this.read = 0;
+	this.page = page;
+	
+	this.nameOfTheBook = function() { return this.name;}
+	this.readBook = function(num) {
+		this.read = num;
+		return this.read;
+	}
+	this.pageLeft = function() {
+		left = this.page - this.read;
+		return left;
+	}
+}
+</script>
+</head>
+<body>
+<h3>객체 생성 new Object() 사용</h3>
+<script type="text/javascript">
+document.write("book : ");
+document.write(book.name+", ");
+document.write(book.author+", ");
+document.write(book.publisher+", ");
+document.write(book.read+", ");
+document.write(book.page+"<br>");
+
+document.write("이 책의 이름은 "+book.nameOfTheBook()+"입니다.<br>");
+book.readBook(20);
+document.write("앞으로 읽어야할 페이즈수는 "+book.pageLeft()+"페이지 입니다.<br>");
+</script>
+
+<hr>
+<h3>객체 생성 리터럴 표기법</h3>
+<script type="text/javascript">
+document.write("book2 : ");
+document.write(book2.name+", ");
+document.write(book2.author+", ");
+document.write(book2.publisher+", ");
+document.write(book2.read+", ");
+document.write(book2.page+"<br>");
+
+document.write("이 책의 이름은 "+book2.nameOfTheBook()+"입니다.<br>");
+book2.readBook(20);
+document.write("앞으로 읽어야할 페이즈수는 "+book2.pageLeft()+"페이지 입니다.<br>");
+</script>
+
+<hr>
+<h3>객체 생성 프로토타입</h3>
+<script type="text/javascript">
+var book3 = new Book("적분과통계","김민규","양천출판",250);
+document.write("book3 : ");
+document.write(book3.name+", ");
+document.write(book3.author+", ");
+document.write(book3.publisher+", ");
+document.write(book3.read+", ");
+document.write(book3.page+"<br>");
+document.write("이 책의 이름은 "+book3.nameOfTheBook()+"입니다.<br>");
+book3.readBook(20);
+document.write("앞으로 읽어야할 페이즈수는 "+book3.pageLeft()+"페이지 입니다.<br>");
+</script>
+</body>
+</html>
+
+<!-- 
+<script type="text/javascript">
+function nameOfTheBook() {
+	return this.name;
+}
+
+function readBook(num) {
+	this.read = num;
+	return this.read;
+}
+
+function pageLeft() {
+	left = this.page - this.read;
+	return left;
+}
+
+var book = new Object();
+book.name = "수학의 정석";
+book.author = "홍성대";
+book.publisher = "성지출판";
+book.read = 0;
+book.page = 300;
+book.nameOfTheBook = nameOfTheBook;
+book.readBook = readBook;
+book.pageLeft = pageLeft; 
+</script>
+
+<script type="text/javascript">
+var book2 = {
+	name = "수학의 정석",
+	author = "홍성대",
+	publisher = "성지출판",
+	read = 0,
+	page = 300,
+	nameOfTheBook : function() { return this.name;},
+	readBook : function(num) {
+		this.read = num;
+		return this.read;
+	}
+	pageLeft : function() {
+		left = this.page - this.read;
+		return left;
+	}
+};
+</script>
+ -->
