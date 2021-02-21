@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type ="text/css">
+div{display:inline-block; width:50px; padding:50px;}
+</style>
+</head>
+<body>
+- 색상을 난수로 처리<br/>
+- < div > 태그 사용하여 4X4에 해당하는 박스 출력 후 실행할 때마다 다른 색상의 박스로 출력되도록 작성<br/>
+<hr>
+<script type="text/javascript">
+var r = Math.floor(Math.random()*256);
+var g = Math.floor(Math.random()*256);
+var b = Math.floor(Math.random()*256);
+document.write(r+"<br>");
+document.write(g+"<br>");
+document.write(b+"<br>");
+document.write('<div style="background-color:rgb('+r+','+g+','+b+');"></div>');
+</script>
+<hr>
+<script>
+for(i=0;i<4;i++) {
+	for(j=0;j<4;j++) {
+		r = Math.floor(Math.random()*256);
+		g = Math.floor(Math.random()*256);
+		b = Math.floor(Math.random()*256);
+		document.write('<div style="background-color:rgb('+r+','+g+','+b+');">'+r+','+g+','+b+'</div>');
+	}
+	document.write("<br/>")
+}
+</script>
+<hr>
+</body>
+</html>
