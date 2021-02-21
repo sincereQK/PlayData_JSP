@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>도형 변경</title>
+<style> 
+ #b1 {  width : 300px;   height : 100px; 
+        border : 1px black solid;
+        text-align : center;
+        line-height : 100px;
+     }  
+ 
+ #b2 {  width : 300px;   height : 90px; 
+        border : 1px black solid;
+        text-align : center;
+        line-height : 90px;
+        box-shadow: 5px -5px 5px 5px gray;
+        border-radius:90%/40%;
+        font-size: 180%;
+     }          
+</style>
+<script type="text/javascript">
+function changeToB2() {
+	var div = document.getElementsByTagName('div')[0];//첫번쨰 div를 가져옴
+	div.id = 'b2';
+}
+
+function changeToB1() {
+	var div = document.getElementsByTagName('div')[0];//첫번쨰 div를 가져옴
+	div.id = 'b1';
+}
+</script>
+</head>
+<body>
+<h2>What Can JavaScript Do?</h2>
+<div id ="b1">자바스크립트 입문</div> <br>
+<input type="button" value="변경" onclick="changeToB2()">
+<input type="button" value="원래대로" onclick="changeToB1()">
+</body>
+</html>
