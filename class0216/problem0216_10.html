@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS 스타일 동적 변경</title>
+<script>
+function change() {
+	var li1 = document.getElementById("myLi1");
+	var li2 = document.getElementById("myLi2");
+	var li3 = document.getElementById("myLi3");
+	var li4 = document.getElementById("myLi4");
+	var li5 = document.getElementById("myLi5");
+	li1.style.color = "red";
+	li2.style.color = "red";
+	li3.style.color = "red";
+	li4.style.color = "red";
+	li5.style.color = "red";
+}
+
+function chageLiColor() {
+	var spanLi = document.getElementById("myLi");
+	spanLi.style.color = "red";
+}
+
+function chageAllLiColor() {
+	var spanLi = document.getElementById("allLi");
+	spanLi.style.color = "Green";
+}
+
+</script>
+</head>
+<body>
+<h2>ol 태그 색변경</h2>
+	<ol type="1" id="allLi">
+		<li id="myLi">국어</li>
+		<li>수학</li>
+		<li>영어</li>
+		<li>사회</li>
+		<li>과학</li>
+	</ol>	
+
+<input type="button" value="글자색변경" onclick="chageLiColor()">
+
+<input type="button" value="모든Li색변경" onclick="chageAllLiColor()">
+<hr>
+<h2>li 태그 색변경</h2>
+	<ol type="1">
+		<li id="myLi1">국어</li>
+		<li id="myLi2">수학</li>
+		<li id="myLi3">영어</li>
+		<li id="myLi4">사회</li>
+		<li id="myLi5">과학</li>
+	</ol>
+<input type="button" value="글자색변경" onclick="change()">
+</body>
+</html>
