@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>document.getElementsByTagName()</title>
+<script>
+function change() {
+	var spanArray = document.getElementsByTagName("span");
+	for(var i=0; i<spanArray.length; i++) {
+		var span = spanArray[i];
+		span.style.color = "orchid";
+		span.style.fontSize = "20px";
+	}
+}
+function changeDiv() {
+	var divArray = document.getElementsByTagName("div");
+	for(var i=0; i<divArray.length; i++) {
+		var div = divArray[i];
+		div.style.color = "blue";
+		div.style.fontSize = "30px";
+	}
+}
+function changeP() {
+	var pArray = document.getElementsByTagName("p");
+	for(var i=0; i<pArray.length; i++) {
+		var p = pArray[i];
+		p.style.color = "red";
+		p.style.fontSize = "50px";
+	}
+}
+function changeThree() {
+	var spanTest = document.getElementById("spanTest");
+	var pTest = document.getElementById("pTest");
+	var divTest = document.getElementById("divTest");
+	spanTest.style.color = "black";
+	spanTest.style.fontSize = "14px";
+	
+	pTest.style.color = "black";
+	pTest.style.fontSize = "14px";
+	
+	divTest.style.color = "black";
+	divTest.style.fontSize = "14px";
+}
+</script>
+</head>
+<body>
+<h3>내가 좋아하는 과일
+	<button onclick="change()">누르세요</button>
+</h3>
+<hr>
+저는 빨간 <span>사과</span>를 좋아해서
+아침마다 한 개씩 먹고 있어요. 운동할 때는 중간 중간에
+<span>바나나</span>를 먹지요. 탄수화물 섭취가 빨라
+힘이 납니다. 또한 달콤한 향기를 품은 <span>체리</span>와
+여름 냄새 물씬 나는 <span>자두</span>를 좋아합니다.
+
+<hr>
+<button onclick="changeDiv()">div버튼</button> <br>
+이번에는 <div>div태그</div>를 사용해 볼겁니다.
+저는 <div>갤럭시노트6</div>를 사용했습니다.
+지금은 <div>갤럭시노트20</div>를 사용하고 있습니다.
+
+<hr>
+<button onclick="changeP()">p버튼</button> <br>
+마지막으로 <p>p태그</p>를 사용할 겁니다. 
+현재 제가 사용중인 노트북은 <p>HP파빌리온</p>입니다.
+<p>GTX1660ti</p>를 탑재하고있습니다. <br>
+이전에 사용하던 노트북은 <p>LG그램</p>입니다. <p>내장그래픽카드</p>를 사용합니다.
+
+<hr>
+<button onclick="changeThree()">ID 이용버튼</button> <br>
+이번에는 전부 섞어서 사용해볼겁니다.<br>
+이거는 <span id="spanTest">span</span>태그 입니다. <br>
+옆에있는거는 <p id="pTest">p태그</p> 입니다. <br>
+마지막으로 <div id="divTest">div태그</div> 입니다. <br>
+</body>
+</html>
+
+<!-- 
+1=================
+- <p>, <div>, <span> 태그를 사용한 문장 임의로 작성
+- document.getElementsByTagName()를 사용하여 모양 바꾸기
+업로드한 2일차 답안 파일 내용 중에서 switch~case 사용한 프로그램에서는 default 추가 작성하면 더 낫겠고, 
+숫자 sort()하는 부분은 비교함수 사용해서 수정하세요.
+1================= 
+-->
