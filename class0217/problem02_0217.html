@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>0217 2번문제</title>
+<script>
+function addAnswer(obj, text) {
+	var parent = obj.parentElement;
+	var newDiv = document.createElement("div");
+	newDiv.innerHTML = text;
+	newDiv.onclick = function(parent) {
+		var p = this.parentElement;
+		p.removeChild(this);
+	};
+	parent.appendChild(newDiv);
+}
+</script>
+</head>
+<body>
+<div>
+<div>
+<h3>Q. 거울아 거울아 세상에서 누가 제일 예쁘니?</h3>
+<button onclick="addAnswer(this, '신데렐라');">답</button>
+</div>
+</div>
+<hr>
+
+<div>
+<div>
+<h3>Q. 죽느냐 사느냐 어떤 것이 문제인가?</h3>
+<button onclick="addAnswer(this, '밥이나 먹어');">답</button>
+</div>
+</div>
+</body>
+</html>
+<!-- 
+(2) 
+[답] 버튼을 클릭하면 답이 보이게 하는 코드 작성
+-------------------------------------------------------------
+Q. 거울아 거울아 세상에서 누가 제일 예쁘니?
+[답]
+___________
+Q. 죽느냐 사느냐 어떤 것이 문제인가?
+[답]
+___________
+-------------------------------------------------------------
+ -->
