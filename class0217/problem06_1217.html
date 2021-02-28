@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>폰트</title>
+<style>
+body {
+	font-family: "Times New Roman", Serif;
+	font-size: large;
+}
+h3 {
+	font: italic bold 40px consolas, sans-serif;
+}
+h4 {
+	font: bold 40px ;
+}
+span {
+	font: normal lighter 40px Helvetica, Arial, sans-serif;
+}
+#myFont1 {
+	font: italic 40px Helvetica, Arial, sans-serif;
+}
+#myFont2 {
+	font: oblique bold 40px Helvetica, Arial, sans-serif;
+}
+</style>
+</head>
+<body>
+<h3>Consolas font</h3>
+<hr>
+<p style="font-weight:900">font-weight 900</p>
+<p style="font-weight:100">font-weight 100</p>
+<p style="font-style:italic">Italic Style</p>
+<p style="font-style:oblique">Oblique Style</p>
+<p>현재 크기의
+	<span style="font-size:1.5em">1.5배</span>
+	크기로
+</p>
+<hr>
+<h2>monospace font</h2>
+<p style="font-weight:900;font-family: arial">font-weight 900 / font-family arial</p>
+<p style="font-weight:900;font-family: arial;font-style:italic">font-weight 900 / font-family arial / font-style:italic</p>
+<br>
+<span>일단은 Helvetica, 없으면 Arial, 그것도없으면 serifs가 없는 글꼴.</span>
+<div id='myFont1'>ID로 넣는 것도 되나? 되넹!!</div>
+<div id='myFont2'>이거는 bold에다가 Oblique를 넣었어</div>
+</body>
+</html>
