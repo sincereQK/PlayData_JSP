@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>스스로 만든 홈페이지</title>
+<script>
+function changeImage() {
+	var sel = document.getElementById("sel");
+	var img = document.getElementById("myImg");
+	img.onload = function () {
+		 // 이미지 크기 출력
+	 	var mySpan = document.getElementById("mySpan");
+		mySpan.innerHTML = img.width + "x" + img.height;
+	}
+	var index= sel.selectedIndex; // 선택된 옵션 인덱스
+	img.src = sel.options[index].value; // <option>의 value 속성
+	// 이미지 로딩 시작, 완료 후 onload 리스너 호출
+}
+function printSize() {
+	var img = document.getElementById("myImg");
+}
+</script>
+<style>
+body { background : ghostwhite; }
+span { font: italic Bold 40px Arial, sans-serif;
+		text-align: center;
+		porsition: relative;
+}
+div.box {
+	background : yellow;
+	border-style : solid;
+ 	border-color : peru;
+
+	margin : 40px;
+	border-width : 30px;
+	padding : 20px;
+}
+
+div.box1{
+	background-image : url("../img/breakfast.jpg");
+	background-size: 500px 283px;
+	background-position : center center;
+	background-repeat: no-repeat;
+	float: left;
+	width : 500px;
+	height : 283px;
+	color : white;
+	font-size : 50px;
+	display: inline-block;
+	
+}
+div.box1text{
+	width : 500px;
+	height : 283px;
+	color : black;
+	font-size : 50px;
+	float: left;
+	display: inline-block;
+}
+
+
+div.box2{
+	background-image : url("../img/lunch_HalalGuys.jpg");
+	background-size: 500px 400px;
+	background-position : center center;
+	background-repeat: no-repeat;
+	float: left;
+	
+	width : 500px;
+	height : 400px;
+	color : white;
+	font-size : 50px;
+
+}
+div.box2text{
+	float: left;
+	width : 500px;
+	height : 400px;
+	color : black;
+	font-size : 50px;
+	
+}
+div.box3{
+	background-image : url("../img/peter_steak.jpg");
+	background-size: 500px 333px;
+	background-position : center center;
+	background-repeat: no-repeat;
+	float: left;
+	
+	width : 500px;
+	height : 333px;
+	color : white;
+	font-size : 50px;
+}
+
+div.box3text{
+	float: left;
+	width : 500px;
+	height : 333px;
+	color : black;
+	font-size : 50px;
+}
+</style>
+</head>
+<body>
+	<div class="box">
+		<span>2020.02.17 MENU</span>
+	</div>
+	<hr>
+<div>
+	<div>
+		<div class="box1">
+		아침		
+		</div>
+		<div class="box1text">
+		English Breakfast	
+		</div>
+	</div>	
+	<div>
+		<div class="box2">
+			점심
+		</div>
+		<div class="box2text">
+		HalaGuys
+		</div>
+	</div>
+	<div>
+		<div class="box3">
+		저녁
+		</div>
+		<div class="box3text">
+		Steak
+		</div>
+	</div>
+</div>
+	<form>
+	<select id="sel" onchange="changeImage()">
+		<option value="../img/breakfast.jpg">잉글리쉬브렉퍼스트
+		<option value="../img/lunch_HalalGuys.jpg">할랄가이즈
+		<option value="../img/peter_steak.jpg">스테이크
+	</select>
+<span id="mySpan">이미지 크기</span>
+</form>
+	<p><img id="myImg" src="../img/peter_steak.jpg" alt="."></p>
+</body>
+</html>
