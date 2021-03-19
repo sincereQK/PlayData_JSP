@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>전구 켜고, 끄기</title>
+<style type="text/css">
+#b1 { background: lightyellow; }
+#b2 { background: lightgray; }
+</style>
+</head>
+<body>
+<h3>What Can JavaScript Do?</h3>
+<button id="b1" onclick="changeOn()">전구켜기</button>
+<img src="../img/lightBulbOff.jpg" id='img1' width="100" height="140">
+<button id="b2" onclick="changeOff()">전구끄기</button>
+</body>
+<script type="text/javascript">
+function changeOn() {
+	var button1 = document.getElementsByTagName('button')[0];
+	var button2 = document.getElementsByTagName('button')[1];
+	var img1 = document.getElementById('img1');
+	img1.src="../img/lightBulbOn.jpg"
+	button1.id = 'b2';
+	button2.id = 'b1';
+}
+
+function changeOff() {
+	var button1 = document.getElementsByTagName('button')[0];
+	var button2 = document.getElementsByTagName('button')[1];
+	var img1 = document.getElementById('img1');
+	img1.src="../img/lightBulbOff.jpg"
+	button1.id = 'b1';
+	button2.id = 'b2';
+}
+</script>
+</html>
