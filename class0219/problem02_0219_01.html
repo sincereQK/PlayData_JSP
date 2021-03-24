@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<body>
+<h3> 행운번호를 추천합니다. </h3><hr>   
+<button onclick="luckyNumber();">행운번호 생성</button> 
+<script> 
+function luckyNumber() {
+	var num = new Array();
+	for(i=0;i<6;i++) {
+		num[i] = Math.floor((Math.random()*45)+1);
+		for(j=i-1;j>=0;j--) {
+			if(num[i]==num[j]) {
+				i--;
+				break;
+			}
+		}
+	}
+	document.write("<h3> 행운 번호</h3><hr>");   
+    for (i=0; i<5; i++){
+    	document.write(num[i]+"&nbsp;");
+    }
+    document.write("<br>보너스 : " + num[5]); 
+} 
+</script>
+</body>
+
+</body>
+</html>
