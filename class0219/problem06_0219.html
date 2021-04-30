@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>현재 시간</title>
+<script type="text/javascript">
+var timerID = setInterval(now,1000);
+
+function now() {
+	var date = new Date();
+	var str="현재 시간 : ";
+	str += date.getHours()+"시"+date.getMinutes()+"분"+date.getSeconds()+"초"
+	document.getElementById("clock").innerHTML=str;
+}
+function stop() {
+	clearInterval(timerID);
+}
+function restart() {
+	var timerID = setInterval(now,1000);
+}
+</script>
+</head>
+<body>
+<h3>setInterval()</h3>
+<hr>
+<span id="clock"></span>
+<hr>
+<button onclick="stop();">멈추기</button>
+<button onclick="restart();">시작</button>
+</body>
+</html>
