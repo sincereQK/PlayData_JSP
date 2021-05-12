@@ -7,8 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h3>³» Á¤º¸</h3>
-<a href="${pageContext.request.contextPath }/test/test/index.jsp">index·Î ÀÌµ¿</a>
+<h3>Â³Â» ÃÂ¤ÂºÂ¸</h3>
+<a href="${pageContext.request.contextPath }/test/test/index.jsp">indexÂ·Ã Ã€ÃŒÂµÂ¿</a>
 <form action="${pageContext.request.contextPath }/MyInfo" method="post" name="f">
 <table border="1">
 <tr><th>id</th><td><input type="text" name="id" value="${m.id }" readonly="readonly"></td></tr>
@@ -16,7 +16,7 @@
 <tr><th>name</th><td><input type="text" name="name" value="${m.name }" readonly="readonly"></td></tr>
 <tr><th>email</th><td><input type="text" name="email" value="${m.email }"></td></tr>
 <tr> <td colspan="2"> 
-<input type="submit" value="¼öÁ¤">
+<input type="submit" value="Â¼Ã¶ÃÂ¤">
 </td></tr>
 </table>
 </form>
