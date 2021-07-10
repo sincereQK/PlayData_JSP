@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+
+<script src="script/lib.js"></script>
+<script>
+function over(obj) {
+	obj.src="img/banana.jpg";
+}
+function out(obj) {
+	obj.src="img/apple.png";
+}
+</script>
+<title>prompt를 이용한 수정</title>
+</head>
+
+<body>
+<h1>김민규</h1>
+<hr>
+<script>
+	var option = prompt("실행할 문제를 선택해주세요", 1);
+	option = parseInt(option); // 문자열을 숫자로 바꿈
+	if(option==1) {
+		document.write("<h3> 1번 문제 </h3>");
+		document.write("<img src=\"img/apple.png\" alt=\"이미지\" width=\"100\" height=\"100\" onmouseover=\"this.src='img/banana.jpg'\" onmouseout=\"this.src='img/apple.png'\">");
+
+	} else if(option==2) {
+		document.write("<h3> 2번 문제 </h3>");
+		document.write("<h4>script 태그에 자바스크립트 작성</h4>");
+		document.write("<h5>마우스 올려 보세요</h5>");
+		document.write("<img src=\"img/apple.png\" alt=\"이미지2\" width=\"100\" height=\"100\" onmouseover=\"over1(this)\" onmouseout=\"out1(this)\">");
+		
+	} else if(option==3) {
+		document.write("<h3> 3번 문제 </h3> ");
+		document.write("<h4> 외부 파일에 자바스크립트 작성 </h4>");
+		document.write(" <img src=\"img/apple.png\" ");
+		document.write(" alt=\"이미지3\" width=\"100\" height=\"100\" ");
+		document.write(" onmouseover=\"overTest(this)\" ");
+		document.write(" onmouseout=\"outTest(this)\"> ");
+	} else if(option==4) {
+		document.write("<h3> 4번 문제 </h3>");
+		document.write("<h4> URL에 자바스크립트 작성 </h4>");
+		document.write("<h5> 링크의 href에 자바스크립트 작성 </h5>");
+		document.write("<a href=\"javascript:alert('클릭하셨어요?')\">클릭해보세요</a>");
+		
+	} else if(option==5) {
+		document.write("<h3> 5번 문제 </h3>");
+		document.write("<h4> document.write() 활용 </h4>");
+		document.write("<h3>Welcome!</h3>");
+		document.write("2 + 5 는 <br>");
+		document.write("<mark>7 입니다.</mark>");
+		
+	} else if(option==6) {
+		document.write("<h3> 6번 문제 </h3>");
+		document.write("<h4> 지역변수와 전역변수 </h4>");
+		
+		var x=100; // 전역변수
+
+		function f() { // 함수 f() 선언
+			var x=1; // 지역변수
+			document.write("지역변수 x=" + x);
+			document.write("<br>");
+			document.write("전역변수 x=" + this.x);
+		}
+
+		f();
+		
+	} else if(option==7) {
+		document.write("<h3> 7번 문제 </h3>");
+		document.write("<h4> 상수 </h4>");
+		
+		var oct = 015; // 015는 8진수. 10진수로 13
+		var hex = 0x15; // 0x14는 16진수. 10진수로 21
+		var condition = true; // True로 하면 안됨
+
+		document.write("8진수 015는 십진수로 " + oct + "<br>");
+		document.write("16진수 0x15는 십진수로 " + hex + "<br>");
+		document.write("condition은 " + condition + "<br>");
+		document.write('문자열 : 단일인용부호로도 표현' + "<br>");
+		document.write("그녀는 \"누구세요\"라고 했습니다.");
+		
+	} else if(option==8) {
+		document.write("<h3> 8번 문제 </h3>");
+		document.write("<h4> 산술 연산 </h4>");
+		var x=32;
+		var total = 100 + x*2/4 - 3; // total은 113
+		var div = x / 10; // div는 3.2
+		var mod = x % 2; // x를 2로 나눈 나머지, 0
+
+		document.write("x : " + x + "<br><br>");
+		document.write("100 + x*2/4 - 3 = " + total + "<br>");
+		document.write("x/10 = " + div + "<br>");
+		document.write("x%2 = " + mod + "<br>");
+		
+	} else if(option==9) {
+		document.write("<h3> 9번 문제 </h3>");
+		document.write("<h4> 대입 연산 </h4>");
+		var x=3, y=3, z=3;
+		document.write("x=" + x + ", y=" + y);
+		document.write(", z=" + z + "<br><br>");
+
+		x += 3; // x=x+3 -> x=6
+		y *= 3; // y=y*3 -> y=9
+		z %= 2; // z=z%2 -> z=1
+
+		document.write("x += 3; 실행 후, x=" + x + "<br>");
+		document.write("y *= 3; 실행 후, y=" + y + "<br>");
+		document.write("z %= 2; 실행 후, z=" + z);
+		
+	} else if(option==10) {
+		document.write("<h3> 10번 문제 </h3>");
+		document.write("<h4> 비교 연산 </h4>");
+		
+		var x=13, y=7;
+		document.write("x=" + x + ", y=" + y + "<br><br>");
+		document.write("x == y : " + (x == y) + "<br>");
+		document.write("x != y : " + (x != y) + "<br>");
+		document.write("x >= y : " + (x >= y) + "<br>");
+		document.write("x > y : " + (x > y) + "<br>");
+		document.write("x <= y : " + (x <= y) + "<br>");
+		document.write("x < y : " + (x < y) + "<br>");
+		
+	} else if(option==11) {
+		document.write("<h3> 11번 문제 </h3>");
+		document.write("<h4> 논리 연산 </h4>");
+		var x=true; y=false;
+		document.write("x=" + x + ", y=" + y + "<br><br>");
+		document.write("x && y : "+ (x&&y) +"<br>");
+		document.write("x || y : "+ (x||y) +"<br>");
+		document.write("!x : " + (!x) +"<br>");
+		document.write("<br/>");
+		document.write("(3>2) && (3<4) : " + ((3>2)&&(3<4)) + "<br>");
+		document.write("(3==-2) || (-1<0) : " + ((3==2)||(-1<0)));
+		
+	} else if(option==12) {
+		document.write("<h3> 12번 문제 </h3>");
+		document.write("<h4> 조건 연산 </h4>");
+		var a=3, b=5;
+		document.write("a=" + a + ", b=" + b + "<br><br>");
+		document.write("두수의 차이 : " + ((a>b)?(a-b):(b-a)));
+		
+	} else if(option==13) {
+		document.write("<h3> 13번 문제 </h3>");
+		document.write("<h4> 비트 연산 </h4>");
+		document.write("<h5> 비트 논리 연산과 시프트 연산 </h5>");
+		
+		var x=10, y=3;
+		document.write("<pre>");
+		document.write("x=" + x + ", y=" + y + "<br>"); // x, y 값 출력
+		document.write("x : 		" + digit8(x) + "<br>"); // x 값 출력
+		document.write("y : 		" + digit8(y) + "<br>"); // y 값 출력
+		document.write("<br>");
+		document.write("x & y  : 	" + digit8(x&y) + "<br>");
+		document.write("x | y  : 	" + digit8(x|y) + "<br>");
+		document.write("x ^ y  : 	" + digit8(x^y) + "<br>");
+		document.write("~x     : 	" + digit8(~x) + "<br>");
+		document.write("<br>");
+		document.write("x << 1 : 	" + digit8(x<<1) + " (" + (x<<1) + ")<br>");
+		document.write("x >> 1 : 	" + digit8(x>>1) + " (" + (x>>1) + ")<br>");
+		document.write("x >>> 1: 	" + digit8(x>>>1) + " (" + (x>>>1) + ")");
+		document.write("</pre>");
+		
+	} else if(option==14) {
+		document.write("<h3> 14번 문제 </h3>");
+		document.write("<h4> 문자열 연산 </h4>");
+
+		document.write("abc" + 23 + "<br>");
+		document.write(23 + "abc" + "<br>");
+		document.write(23 + "35" + "<br>");
+		document.write(23 + 35 + "<br>");
+		document.write(23 + 35 + "abc" + "<br>");
+		document.write("abc" + 23 + 35 + "<br><br>");
+
+		var name = "kitae";
+		document.write(name == "kitae");
+		document.write("<br>");
+		document.write(name > "park");
+		
+	} else if(option==15) {
+		document.write("<h3> 15번 문제 </h3>");
+		document.write("<h4> if-else </h4>");
+		document.write("<h5> if-else를 이용한 학점 매기기 </h5>");
+		
+		var grade;
+		var score = prompt("김민규 님 점수를 입력하세요", 100);
+		score = parseInt(score); // 문자열을 숫자로 바꿈
+		if(score >= 90) // score가 90 이상
+			grade = "A";
+		else if(score >= 80) // 80 이상 90 미만
+			grade = "B";
+		else if(score >= 70) // 70 이상 80 미만
+			grade = "C";
+		else if(score >= 60) // 60 이상 70 미만
+			grade = "D";
+		else // 60 미만
+			grade = "F";
+		document.write(score + "은 " + grade + "입니다.<br>")
+		
+	}
+
+</script>
+<hr>
+<h1>김민규</h1>
+</body>
+</html>
